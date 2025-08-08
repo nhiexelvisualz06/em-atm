@@ -1,0 +1,14 @@
+{
+  "routes": {
+    "/em-atm": {},
+    "/em-atm/balance": {},
+    "/em-atm/enter-pin": {},
+    "/em-atm/main-menu": {},
+    "/em-atm/no-transaction": {},
+    "/em-atm/select-account": {},
+    "/em-atm/transaction-completed": {},
+    "/em-atm/transaction-processing": {},
+    "/em-atm/withdraw": {},
+    "/em-atm/withdraw-exit": {}
+  }
+}
