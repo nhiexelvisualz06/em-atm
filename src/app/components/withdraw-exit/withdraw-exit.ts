@@ -13,11 +13,10 @@ export class WithdrawExit {
 
   constructor(private router: Router) {}
 
-  goToLandingPage() {
-    this.disableBtn = true;
+  ngOnInit() {
     setTimeout(() => {
       this.router.navigate(['']);
-    }, 4000);
+    }, 5000);
   }
 
   
