@@ -1,0 +1,87 @@
+.logo-row {
+    padding-top: 20px;
+}
+
+.col-row {
+    display: flex;
+}
+
+#atm-logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+h2 {
+    display: inline;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+#p-title {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.container {
+    color: white;
+}
+
+.row-2 {
+    margin: 30px 0 30px 0;
+}
+
+.category-row {
+    margin-top: 50px;
+    height: 10vh;
+}
+
+.first-category {
+    margin-top: 80px;
+}
+
+.col-button {
+    padding: 0;
+    margin: 0;
+}
+
+.key-press {
+    height: 100%;
+    width: 100%;
+    background-color:lightgray;
+    cursor: pointer;
+}
+
+.category{
+    position: relative;
+    border-bottom: 5px solid white;
+}
+
+.right-side {
+    background-image: linear-gradient(to right, rgba(0, 100, 0, 0), #136642);
+}
+
+.category span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+@media (min-width: 360px ) and (max-width: 410px) {
+    #p-title {
+        font-size: 1.2em;
+    }
+
+    .row-2 {
+        padding: 0;
+    }
+
+    .category span {
+        font-size: 1.2em;
+    }
+
+}

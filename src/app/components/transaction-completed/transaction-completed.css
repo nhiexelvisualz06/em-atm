@@ -1,0 +1,107 @@
+.logo-row {
+    padding-top: 20px;
+}
+
+.col-row {
+    display: flex;
+}
+
+#atm-logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+h2 {
+    color: white;
+    display: inline;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+h1, h3, #span-counting {
+    color: white;
+}
+
+.col-icon {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#transact-complete-icon {
+    width: 300px;
+    height: 190px;
+}
+
+.dots-animation {
+  min-width: 1.5em; 
+  display: inline;
+  letter-spacing: 0.2em;
+}
+
+.dots-animation span {
+  animation: blink 1.4s infinite;
+  opacity: 0;
+}
+
+.dots-animation span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots-animation span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+#btn-get-card {
+    width: 200px;
+    height: 40px;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.invisible-content {
+    visibility: hidden;
+}
+
+@media (min-width: 360px) and (max-width: 410px) {
+    #transact-complete-icon {
+        width: 200px;
+        height: 127px;
+    }
+
+    #h1-transaction-completed {
+        font-size: 1.5em;
+    }
+
+    #h3-get-card {
+        font-size: 1.2em;
+    }
+
+    #span-counting {
+        font-size: 1.2em;
+    }
+
+    .dots-animation {
+      min-width: 1em; 
+      display: inline;
+      letter-spacing: 0.1em;
+    }
+
+    #btn-get-card {
+        width: 150px;
+        height: 35px;
+        font-size: 1.4rem;
+    }
+
+}

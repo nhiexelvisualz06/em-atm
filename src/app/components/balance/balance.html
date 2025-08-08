@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row logo-row">
+        <div class="col col-row">
+            <img src="peso.png" alt="ATM Logo" id="atm-logo">
+            <h2>EM's ATM</h2>
+        </div>
+    </div>
+    <div class="row row-2 justify-content-center">
+        <div class="col text-center">
+            <p id="p-title">YOUR BALANCE IS:</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-2 text-end number-caption">
+            <p>ACCOUNT NO:</p>
+        </div>
+        <div class="col-6 info-block">
+            <p class="number-info text-end">************0528</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-2 text-end number-caption" id="number-caption-2">
+            <p>CURRENT:</p>
+        </div>
+        <div class="col-6 info-block">
+            <p class="number-info text-end">{{ currentBalance | number:'1.2-2' }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-2 text-end number-caption">
+            <p>AVAILABLE:</p>
+        </div>
+        <div class="col-6 info-block">
+            <p class="number-info text-end">{{ currentBalance | number:'1.2-2' }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-10 text-center"><p id="p-transaction">WOULD YOU LIKE ANOTHER TRANSACTION?</p></div>
+    </div>
+    <div class="row row-answer justify-content-end">
+        <div class="col-4 category right-side" >
+            <span>YES</span>
+        </div>
+        <div class="col-1 col-button">
+            <button class="key-press" type="button" [routerLink]="['/main-menu']"></button>
+        </div>  
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-4 category right-side">
+            <span>NO</span>
+        </div>
+        <div class="col-1 col-button">
+            <button class="key-press" type="button"></button>
+        </div> 
+    </div>
+
+</div>

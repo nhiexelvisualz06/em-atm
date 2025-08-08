@@ -1,0 +1,103 @@
+h1 {
+    color: white;
+    padding-top: 25vh;
+}
+
+input {
+    padding-top: 50px;
+    border:none; 
+    background:none; 
+    outline:none; 
+    font-size: 3rem; 
+    text-align: center; 
+    color: white; 
+    opacity: 0; 
+    position: absolute; 
+    left: 0; 
+    width: 1px; 
+    height: 1px;
+}
+
+#input-mask {
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    font-size: 3rem; 
+    color: white; 
+    cursor: text;
+    padding-top: 50px;
+}
+
+.message-container {
+    margin-top: 10px;
+    min-height: 2em;
+    color: white;
+}
+
+#incorrect-pin-message,
+#locked-message {
+    visibility: hidden;
+}
+
+#incorrect-pin-message.visible,
+#locked-message.visible {
+    visibility: visible;
+}
+
+#incorrect-pin-message.none {
+    display: none;
+}
+
+.keypad-bg {
+    background-color: #343a40;
+    border-radius: 16px;
+}
+
+.keypad-btn {
+    width: 105px;
+    height: 70px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.keypad-btn-disabled {
+    background-color: darkgray;
+    color: darkgray;
+    border-color: darkgray
+} 
+
+@media (min-width: 360px) and (max-width: 410px) {
+    h1 {
+        padding-top: 20vh;
+    }
+
+    #h1-title {
+        font-size: 1.3rem;
+    }
+
+    #input-mask {
+        gap: 1rem; 
+        font-size: 1.8rem; 
+        color: white; 
+        cursor: text;
+        padding-top: 20px;
+    }
+
+    .message-container {
+        height: 72px;
+    }
+
+    .keypad-bg {
+        padding: 0 170px;
+    }
+
+    .keypad-btn {
+        height: 50px;
+    }
+
+    .keypad-btn-cancel {
+        font-size: 1.3rem;
+    }
+
+
+}

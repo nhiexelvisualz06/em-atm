@@ -1,0 +1,59 @@
+.container {
+    background-color: white;
+    position: relative;
+}
+
+.bg-image {
+    background-image: url('../../../../public/mama\ atm\ bg\ 500.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+}
+
+#cardless-caption {
+    padding: 20px 90px 20px 90px; 
+    background-color: #5AE800;
+    color: white;
+    font-size: 2.1em;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.insert-card {
+    padding: 0 70px 10px 0; 
+    border: 0; 
+    background-color: white;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 2em;
+}
+
+
+@media (min-width: 360px) and (max-width: 410px) {
+    .bg-image {
+        background-image: url('../../../../public/mama\ atm\ bg\ 500.jpg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 98% auto;
+    }
+    
+    #cardless-caption {
+        padding: 0px 20px 0px 20px; 
+        font-size: 1.2em;
+    }
+
+    .insert-card {
+        font-size: 0.9em;
+        width: 300px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .insert-card p {
+        margin-bottom: 0;
+    }
+    
+}

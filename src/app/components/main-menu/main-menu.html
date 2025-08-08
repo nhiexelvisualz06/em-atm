@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row logo-row">
+        <div class="col col-row">
+            <img src="peso.png" alt="ATM Logo" id="atm-logo">
+            <h2>EM's ATM</h2>
+        </div>
+    </div>
+    <div class="row row-2 justify-content-center">
+        <div class="col text-center">
+            <p id="p-title">PLEASE PRESS THE PROPER KEY<br>
+            FOR YOUR DESIRED TRANSACTION</p>
+        </div>
+    </div>
+    <div class="row category-row">
+        <div class="col col-button">
+            <button 
+                class="key-press" 
+                type="button" 
+                [routerLink]="['/select-account']" 
+                (click)="setTransaction('balance')">
+            </button>
+        </div>
+        <div class="col-4 category left-side">
+            <span>BALANCE INQUIRY</span>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4 category right-side">
+            <span>WITHDRAW CASH</span>
+        </div>
+        <div class="col col-button">
+            <button 
+                class="key-press" 
+                type="button"
+                [routerLink]="['/select-account']" 
+                (click)="setTransaction('withdraw')">
+            </button>
+        </div>        
+    </div>
+    <div class="row category-row">
+        <div class="col col-button">
+            <button class="key-press" type="button"></button>
+        </div>
+        <div class="col-4 category left-side">
+            <span>TRANSFER</span>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4 category right-side">
+            <span>FAST CASH</span>
+        </div>
+        <div class="col col-button">
+            <button class="key-press" type="button"></button>
+        </div>        
+    </div>
+   
+</div>

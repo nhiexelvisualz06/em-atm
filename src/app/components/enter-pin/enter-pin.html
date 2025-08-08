@@ -1,0 +1,54 @@
+<div class="container text-center">
+    <h1 id="h1-title">PLEASE ENTER YOUR PIN TO CONTINUE</h1>
+    <input
+        type="password"
+        maxlength="4"
+        autofocus
+        [(ngModel)]="pin"
+        (input)="onPinInput()"
+        #pinInput
+    >    
+    <div id="input-mask" (click)="pinInput.focus()">
+        @for (char of pinArray; track $index) {
+            <span>
+                {{ char ? 'X' : '_' }}
+            </span>
+        } @empty {}
+    </div>
+    <div class="message-container">
+        <div [class.visible]="showIncorrectPin" id="incorrect-pin-message" [class.none]="removeIncorrectPin">
+            Incorrect PIN, please try again. {{ 3 - balanceService.pinAttempts }} more attempts.
+        </div>
+        <div [class.visible]="showLocked" id="locked-message">
+            Your account is locked due to 3 incorrect pins entered.
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-6 keypad-bg py-4">
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('1')">1</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('2')">2</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('3')">3</button>
+                <button class="btn btn-warning ms-3 keypad-btn" (click)="clearPin()">Clear</button>
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('4')">4</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('5')">5</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('6')">6</button>
+                <button class="btn btn-danger ms-3 keypad-btn last-column keypad-btn-cancel" (click)="cancelPin()">Cancel</button>
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('7')">7</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('8')">8</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('9')">9</button>
+                <button class="btn btn-success ms-3 keypad-btn last-column" (click)="enterPin('enter')">Enter</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-light mx-1 keypad-btn keypad-btn-disabled" disabled>1</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendPin('0')">0</button>
+                <button class="btn btn-light mx-1 keypad-btn keypad-btn-disabled" disabled>1</button>
+                <button class="btn btn-light ms-3 keypad-btn last-column keypad-btn-disabled" disabled>Enter</button>
+            </div>
+        </div>
+    </div>
+</div>

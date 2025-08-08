@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row logo-row">
+        <div class="col col-row">
+            <img src="peso.png" alt="ATM Logo" id="atm-logo">
+            <h2>EM's ATM</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-6 text-center">
+            <p id="p-title">PLEASE ENTER DESIRED AMOUNT</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col input-container text-center">
+            <span class="peso-logo">₱</span>
+            <input
+                type="text"
+                [value]="amount"
+                readonly
+            />
+        </div>
+    </div>
+    <div class="row justify-content-center error-row">
+        <!-- Reserve space for errors so keypad doesn't move -->
+        <div class="col-8 error-row">
+            <div class="error-message text-center" [class.visible]="invalidDenomination">
+                <span *ngIf="invalidDenomination">
+                    Only 100, 500, and 1000 denominations are allowed.
+                </span>
+            </div>
+            <div class="error-message text-center" [class.visible]="insufficientBalance">
+                <span *ngIf="insufficientBalance">
+                    Insufficient balance!
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6 keypad-bg py-4" style="border-radius: 16px;">
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('1')">1</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('2')">2</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('3')">3</button>
+                <button class="btn btn-warning ms-3 keypad-btn" (click)="clearAmount()">Clear</button>
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('4')">4</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('5')">5</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('6')">6</button>
+                <button class="btn btn-danger ms-3 keypad-btn last-column keypad-btn-cancel" (click)="cancelAmount()">Cancel</button>
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('7')">7</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('8')">8</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('9')">9</button>
+                <button class="btn btn-success ms-3 keypad-btn last-column" (click)="enterAmount()">Enter</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-light mx-1 keypad-btn keypad-btn-disabled" disabled>1</button>
+                <button class="btn btn-light mx-1 keypad-btn" (click)="appendAmount('0')">0</button>
+                <button class="btn btn-light mx-1 keypad-btn keypad-btn-disabled" disabled>1</button>
+                <button class="btn btn-light ms-3 keypad-btn last-column keypad-btn-disabled" disabled>enter</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

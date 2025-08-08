@@ -1,0 +1,67 @@
+.container {
+    color: white;
+}
+
+.logo-row {
+    padding-top: 20px;
+}
+
+.col-row {
+    display: flex;
+}
+
+#atm-logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+h2 {
+    color: white;
+    display: inline;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+#message-centered {
+    margin-top: -80px;
+}
+
+#btn-get-card {
+    width: 200px;
+    height: 40px;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+@media (min-width: 360px) and (max-width: 410px) {
+    #message-centered {
+        margin-top: -250px;
+    }
+
+    #message-centered h1 {
+        font-size: 1.5em;
+    }
+
+    #message-centered h3 {
+        font-size: 1.2em;
+    }
+
+    #btn-get-card {
+        width: 150px;
+        height: 35px;
+        font-size: 1.4rem;
+    }
+
+    #col-btn-card {
+        margin-right: 90px;
+    }
+
+}

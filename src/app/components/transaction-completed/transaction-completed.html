@@ -1,0 +1,35 @@
+<div class="container d-flex flex-column">
+    <div class="row logo-row">
+        <div class="col col-row">
+            <img src="peso.png" alt="ATM Logo" id="atm-logo">
+            <h2>EM's ATM</h2>
+        </div>
+    </div>
+  <div class="row text-center">
+    <div class="col col-icon">
+        <img src="transaction complete icon.png" alt="Transaction Completed" id="transact-complete-icon">
+    </div>
+  </div>
+  <h1 class="text-center" id="h1-transaction-completed">TRANSACTION COMPLETED.</h1>
+  <h3 class="text-center" id="h3-get-card">PLEASE GET YOUR CARD.</h3>
+  <div class="row flex-grow-1"></div>
+
+  <div class="row justify-content-end mb-3">
+        <div class="col-auto d-flex align-items-center">
+            <div [class.invisible-content]="!counting" class="me-3">
+                <span id="span-counting">
+                    (Counting Bills)
+                    <span class="dots-animation">
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </span>
+                </span>
+            </div>
+
+            <button id="btn-get-card" (click)="startCountingBills()" [disabled]="counting">
+                GET CARD
+            </button>
+        </div>
+  </div>
+</div>
