@@ -75,6 +75,10 @@ h1, h3, #span-counting {
 }
 
 @media (min-width: 360px) and (max-width: 410px) {
+    .container {
+        height: 100dvh;
+    }
+    
     #transact-complete-icon {
         width: 200px;
         height: 127px;

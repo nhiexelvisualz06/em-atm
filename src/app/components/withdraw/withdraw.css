@@ -98,9 +98,9 @@ input {
     }
 
     .peso-logo {
-        font-size: 2.1em;
+        font-size: 2em;
         top: -5px;
-        transform: translateX(130%);
+        transform: translateX(105%);
     }
 
     .error-message {

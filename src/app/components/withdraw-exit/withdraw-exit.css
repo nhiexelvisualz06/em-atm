@@ -28,22 +28,17 @@ h1 {
 }
 
 #message-centered {
-    margin-top: -80px;
-}
-
-#btn-get-card {
-    width: 200px;
-    height: 40px;
-    font-size: 2rem;
-    border: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15%);
 }
 
 @media (min-width: 360px) and (max-width: 410px) {
     #message-centered {
-        margin-top: -250px;
+        /* margin-top: -250px; */
     }
 
     #message-centered h1 {
@@ -52,16 +47,6 @@ h1 {
 
     #message-centered h3 {
         font-size: 1.2em;
-    }
-
-    #btn-get-card {
-        width: 150px;
-        height: 35px;
-        font-size: 1.4rem;
-    }
-
-    #col-btn-card {
-        margin-right: 90px;
     }
 
 }
